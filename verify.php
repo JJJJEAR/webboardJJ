@@ -10,7 +10,7 @@
     <H1 style="font-size: 200%" align = "center "><b> WebBoard JJ </b></H1>
     <hr>   
     <div align = "center">
-        เข้าสู่ระบบด้วย <br>
+        <b>เข้าสู่ระบบด้วย</b><br>
         Login = <?php echo $_POST["Login"] ?> <br> 
         <?php echo "Password =" .$_POST["Pwd"] ?>
     </div>
