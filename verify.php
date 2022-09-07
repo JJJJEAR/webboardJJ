@@ -10,9 +10,17 @@
     <H1 style="font-size: 200%" align = "center "><b> WebBoard JJ </b></H1>
     <hr>   
     <div align = "center">
-        <b>เข้าสู่ระบบด้วย</b><br>
-        Login = <?php echo $_POST["Login"] ?> <br> 
-        <?php echo "Password =" .$_POST["Pwd"] ?>
+        <?php 
+            $Login = $_POST["Login"];
+            $Password = $_POST["Pwd"];
+            if($Login =='admin' && $Password =='ad1234')
+                echo "ยินดีต้อนรับคุณ ADMIN";     
+            elseif($Login =='member' && $Password =='mem1234')
+                echo "ยินดีต้อนรับคุณ MEMBER";  
+            else
+                echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";
+        ?>
+    <br><a href="index.php" > กลับไปยังหน้าหลัก </a> 
     </div>
 </body>
 </html>

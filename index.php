@@ -19,11 +19,13 @@
         <p style="float:right ;"><a href="login.html">เข้าสู่ระบบ</a><br></p>
         <br>
         <ul>
-            <li> <a href="post.php?id=1">กระทู้ที่ 1</a></li>
-            <li> <a href="post.php?id=2">กระทู้ที่ 2</a></li>
-            <li> <a href="post.php?id=3">กระทู้ที่ 3</a></li>
-            <li> <a href="post.php?id=4">กระทู้ที่ 4</a></li>
-            <li> <a href="post.php?id=5">กระทู้ที่ 5</a></li>
+            <?php 
+                for($i=1;$i<=10;$i++) {
+                    echo "<li><a href=post.php?id="."$i".">กระทู้ที่ ".$i."</a></li>";
+                }
+            ?>
+
+
         </ul>   
     </form>
 </body>
