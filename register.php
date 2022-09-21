@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['id'])){
+        header("location:index.php");
+        die();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +26,7 @@
          <tr><td>เพศ:</td><td><input type="radio" name="Female" value="F"> หญิง</td></tr>
          <tr><td></td><td><input type="radio" name="other" value="O"> อื่นๆ</td></tr>
          <tr><td>อีเมล:</td><td><input type="text" name ="Email" size="30"></td></tr><br> 
-         <tr><td colspan="2" align="center"><input type="submit" value="สมัครสมาชิก" ></></td></tr>
+         <tr><td colspan="2" align="center"><input type="submit" value="สมัครสมาชิก" ></td></tr>
     </table>
     <br>
     <div align = "center"><a href="index.php" > กลับไปยังหน้าหลัก </a> </div>
