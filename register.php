@@ -27,6 +27,15 @@
     <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
+        <?php
+        if(isset($_SESSION['add_login'])){
+            if($_SESSION['add_login']=='error'){
+            echo "<div class ='alert alert-danger'>ชื่อบัญชีซ้ำหรือฐานข้อมูลมีปัญหา</div>";
+            }else{
+            echo "<div class ='alert alert-success'>เพิ่มบัญชีเรียบร้อยแล้ว</div>";}
+            unset($_SESSION['add_login']);  
+        }
+        ?>
         <div class="card text-dark bg-white border-primary">
             <div class="card-header bg-primary text-white">กรอกข้อมูล</div>
             <div class="card-body">
