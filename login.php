@@ -36,8 +36,7 @@
     <div class="container">
     <?php
         if(isset($_SESSION['id'])){
-            header("Location: index.php");
-            die();
+            header("Location:index.php");
         }
     ?>
 
@@ -52,11 +51,10 @@
     
     <div class="row">
     <div class="col-md-4"></div>
-        <div class="col-md-4">
+    <div class="col-md-4">
     <?php
         if(isset($_SESSION['error'])){
-            echo"<div class='alert alert-danger'>
-            ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</div>";
+            echo"<div class='alert alert-danger'>ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</div>";
             unset($_SESSION['error']);
         }
     ?>
@@ -78,7 +76,7 @@
                 <div class="form-group mb-4">
                     <label class="form-label">Password :</label>
                     <div class="input-group">
-                        <input type="password" class="form-control"  name="Pwd" id="password" required>
+                        <input type="password" class="form-control" name="Pwd" id="password" required>
                         <span class="input-group-text " onclick="password_show_hide();">
                             <i class="bi bi-eye-fill" id="show_eye"></i>
                             <i class="bi bi-eye-slash-fill d-none" id="hide_eye"></i>
@@ -86,7 +84,7 @@
                     </div>
                 </div>    
                 <center>
-                    <button type="submit"  class="btn btn-secondary btn-sm">Login</button>
+                    <button type="submit" class="btn btn-secondary btn-sm">Login</button>
                 </center>
             </div>
         </div>
